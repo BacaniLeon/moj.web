@@ -1,0 +1,56 @@
+.footerDiv{
+    position:absolute;
+    left: 0;
+    right: 0;
+    height: 200rem;
+    width: 100%;
+    margin:0 auto;
+    background-color: #000000;
+    padding: 10rem 0;
+    ul{
+        position: absolute;
+        display:flex;
+        gap: 30rem;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-inline-start: 0;
+        
+    }
+    li{
+        padding: 30rem 0;
+        text-decoration: none;
+        display: flex;
+        color: white;
+        font-size: 15rem;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    a{
+        font-size: 25rem;
+        text-decoration:none;
+        color:bisque;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        
+    }
+    img{
+        max-width: 40rem;
+        background-color: white;
+        border-radius: 50rem;
+        border: 3rem solid;
+    }
+
+    h5{
+        position: absolute;
+        font-size: 15rem;
+        bottom: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color:bisque;
+    }
+}
+
+
+
+

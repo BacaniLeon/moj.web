@@ -1,0 +1,31 @@
+.prviDio{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+.prviDio__Opis{
+    width: 100%;
+    display: flex;
+    margin-bottom: 100rem;
+}
+
+.prviDio__Opis + .prviDio__Opis{
+    padding: 40rem 0;
+    margin-bottom: 50rem;
+    background-color: #08f9ff33;
+}
+
+.swiperDiv{
+    max-width: 450rem;
+    margin:auto 120rem;
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+a{
+    text-decoration: underline;
+    color: bisque;
+}

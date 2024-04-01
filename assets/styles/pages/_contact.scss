@@ -1,0 +1,74 @@
+.contactMe{
+    display: flex;
+    
+    max-width: 1200rem;
+    padding: 20rem 40rem;
+    width: 70%;
+    background-color: #08f9ff33;
+    margin: 200rem auto 80rem;
+    border-radius: 20rem;
+    gap: 70rem;
+    h1{
+        font-size: 50rem;
+        margin: 10rem auto;
+        width: 300rem;
+        font-stretch: normal;
+    }
+    img{
+        width: 400rem;
+        margin: auto;
+        
+    }
+}
+
+
+
+.contactMe__Div{
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactMe__Name {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.contactMe__Details{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    
+}
+
+input{
+    margin: 0 10rem 20rem;
+    width: 320rem;
+    height: 40rem;
+    text-align: center;
+    border-radius: 10rem;
+    background: linear-gradient(180deg, rgba(254, 201, 0, 0) 69.46%,  100%);
+    
+}
+
+textarea{
+    width: 95%;
+    height: 150rem;
+    margin: 0 auto;
+    border-radius: 10rem;
+    ::placeholder {
+        color: red;
+        text-align: center;
+    }
+}
+
+.contactMe__Submit{
+    width: 150rem;
+    height: 50rem;
+    margin: 20rem auto;
+    border-radius: 10rem;
+    background-color: aquamarine;
+
+}

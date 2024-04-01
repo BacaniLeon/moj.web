@@ -1,0 +1,47 @@
+.navBar{
+    position:absolute;
+    top: 50rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 72rem;
+    width: 100%;
+    margin:0 auto;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    
+    a{
+        font-size: 25rem;
+        text-decoration:none;
+        color:bisque;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 25rem;
+    }
+    a:hover{
+        border-bottom: 7rem solid #08f9ff;
+        background: linear-gradient(0deg, #08f9ff33,transparent);
+        transition: 0.2s;
+    }
+    a.router-link-exact-active{
+        background-color:  #08f9ff33; 
+    }
+    img{
+        position: absolute;
+        top: -53rem;
+        left: -25rem;
+        bottom: 0;
+        max-width: 200rem;
+        width: 100%;
+    }
+}
+
+.navBar__Button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+

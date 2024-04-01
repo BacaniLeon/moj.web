@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "include-media": "^2.0.0",
+    "nuxt": "^3.11.1",
+    "sass": "^1.72.0",
+    "swiper": "^11.1.0",
+    "vue": "^3.4.21",
+    "vue-flickity": "^1.2.1",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "vite-plugin-sass-glob-import": "^3.0.2"
+  }
+}

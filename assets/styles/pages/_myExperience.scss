@@ -1,0 +1,28 @@
+.myExperience{
+    display: block;
+    width: 100%;
+    max-width: 1200rem;
+    margin: 50rem auto;
+    gap: 20rem;
+    justify-content: center;
+    background-color: #08f9ff33;
+    h2::before {
+        counter-increment: section;
+        content:counter(section) ". ";
+      }
+      h4{margin: 0 auto}
+}
+
+.myExperience__Exp{
+    @extend .myExperience;
+    display:flex;
+   
+}
+
+.myExperience__Description{
+    display: block;
+    p{
+        padding: 100rem 0;
+        max-width: 1000rem;
+    }
+}

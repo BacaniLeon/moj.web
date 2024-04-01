@@ -1,0 +1,68 @@
+.aboutMe{
+    max-width: 1200rem;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    h1{
+        max-width: 800rem;
+    }
+}
+
+.aboutMe__Facts{
+    max-width: 1200rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(8, 249, 255, 0.2);
+    padding: 100rem 0 150rem;
+    margin-bottom: 50rem;
+    img{
+        max-width: 600rem;
+        margin:auto;
+    }
+    h2{
+        margin: 0 auto;
+        padding-bottom: 50rem;
+    }
+    p{margin:auto}
+    h2::before {
+        counter-increment: section;
+        content:counter(section) ". ";
+      }
+}
+
+.aboutMe__FactsParagraf{
+    display: flex;
+}
+
+.aboutMe__FactsDugiParagraf{
+    display: grid;
+    p{
+        margin:auto;
+        max-width: 1000rem;
+        padding-bottom: 50rem;
+    }
+}
+
+.aboutMe__Facts:nth-child(odd){
+    .aboutMe__FactsParagraf{
+        flex-direction: row-reverse;
+    }
+}
+
+.aboutMe__ButtonDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutMe__Button{
+    width: 150rem;
+    background-color: rgba(8, 249, 255, 0.2);
+    border-radius: 20rem;
+    height: 70rem;
+    font-size: 25rem;
+    font-weight: 750;
+    margin-bottom: 50rem;
+    
+}
