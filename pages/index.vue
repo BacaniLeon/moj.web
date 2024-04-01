@@ -2,7 +2,7 @@
   <Navigation />
   <BackToTop/>
   <div class="prviDio">
-    <h1>LEON BAĆANI</h1>
+    <h1>LEON BAĆANI LEON BAĆANI</h1>
     <div class="prviDio__Opis">
       
       <p>
