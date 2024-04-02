@@ -3,7 +3,7 @@
   <BackToTop/>
   <div class="aboutMe">
     <h1> THINGS TO KNOW ABOUT ME</h1>
-      <div class="aboutMe__Facts" v-for="fact in facts.slice(0,counter)">
+      <div class="aboutMe__Facts" v-for="fact in facts.slice(0,counter.value)">
         <h2>{{ fact.title }}</h2>
           <div :class=fact.class>
             <p>{{ fact.paragraf }}</p>
@@ -19,7 +19,9 @@
 </template>
 
 <script setup>
-const counter=ref(1);
+const counter=reactive({
+  value: 1
+})
 console.log(counter);
 const isActive=ref(true);
 const facts = [
@@ -57,7 +59,7 @@ const facts = [
 ];
 
 function hideButton(){
-  this.counter++;
+  this.counter.value++;
   if(facts.length===counter.value){
     this.isActive=false;
   }
