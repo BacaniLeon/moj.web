@@ -7,6 +7,9 @@
     gap: 20rem;
     justify-content: center;
     background-color: #08f9ff33;
+    @include media('<=tablet'){
+        width: 80%;
+    }
     h2::before {
         counter-increment: section;
         content:counter(section) ". ";
@@ -17,6 +20,10 @@
 .myExperience__Exp{
     @extend .myExperience;
     display:flex;
+    @include media('<=tablet'){
+        max-width: 350rem;
+        margin: 50rem auto;
+    }
    
 }
 
@@ -25,5 +32,9 @@
     p{
         padding: 100rem 0;
         max-width: 1000rem;
+        @include media('<=tablet'){
+            max-width: 300rem;
+            padding: 30rem 0;
+        }
     }
 }

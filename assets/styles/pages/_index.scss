@@ -9,12 +9,6 @@ html{
     @include media('<=tablet'){
         width: 100%;
     }
-    h1{
-        @include media('<=tablet'){
-            font-size: 40rem;
-            margin: 100rem auto 0;
-        }
-    }
 }
 
 .prviDio__Opis{

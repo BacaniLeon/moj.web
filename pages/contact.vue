@@ -11,7 +11,7 @@
               <input type="text" name="lastname" placeholder="Last Name" v-model="lastName" required autocomplete="off">
             </div>
             <div class="contactMe__Details">
-              <input type="text" name="email" placeholder="Email" v-model="email" required autocomplete="off">
+              <input type="email" name="email" placeholder="Email" v-model="email" required autocomplete="off">
               <input type="text" name="phone" placeholder="Phone Number" v-model="phone" required autocomplete="off">
             </div>  
             <textarea id="message" rows="4" placeholder="Type your message here" v-model="message" required autocomplete="off" maxlength="424"></textarea>

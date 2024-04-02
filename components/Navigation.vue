@@ -14,7 +14,7 @@
 
 <script setup>
 
-var menuHidden= ref(false);
+var menuHidden = ref(false);
 function showMenu(){
   this.menuHidden=!this.menuHidden;
 }

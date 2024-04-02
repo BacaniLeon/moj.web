@@ -9,15 +9,28 @@
     margin: 200rem auto 80rem;
     border-radius: 20rem;
     gap: 70rem;
+    @include media('<=tablet'){
+        display: block;
+        max-width: 400rem;
+        margin: 100rem auto 30rem;
+    }
     h1{
         font-size: 50rem;
         margin: 10rem auto;
         width: 300rem;
         font-stretch: normal;
+        @include media('<=tablet'){
+            font-size: 30rem;
+            width: 100%;
+        }
     }
     img{
         width: 400rem;
         margin: auto;
+        @include media('<=tablet'){
+            width: 250rem;
+            
+        }
         
     }
 }
@@ -29,18 +42,31 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    @include media('<=tablet'){
+        width: 100%;
+    }
 }
 
 .contactMe__Name {
     width: 100%;
     justify-content: center;
     display: flex;
+    @include media('<=tablet'){
+        max-width: 200rem;
+        gap: 10rem;
+        margin: 0 auto;
+    }
 }
 
 .contactMe__Details{
     width: 100%;
     justify-content: center;
     display: flex;
+    @include media('<=tablet'){
+        max-width: 200rem;
+        margin: 0 auto;
+        gap: 10rem;
+    }
     
 }
 
@@ -51,6 +77,11 @@ input{
     height: 40rem;
     text-align: center;
     border-radius: 10rem;
+    @include media('<=tablet'){
+        margin: 10rem auto;
+        height: 20rem;
+        max-width: 200rem;
+    }
 }
 
 textarea{
@@ -58,17 +89,23 @@ textarea{
     height: 150rem;
     margin: 0 auto;
     border-radius: 10rem;
-    ::placeholder {
-        color: red;
-        text-align: center;
+    @include media('<=tablet'){
+        max-width: 200rem;
+        height: 70rem;
     }
 }
 
 .contactMe__Submit{
-    width: 150rem;
+    max-width: 150rem;
+    width: 100%;
     height: 50rem;
     margin: 20rem auto;
     border-radius: 10rem;
     background-color: aquamarine;
+    @include media('<=tablet'){
+        max-width: 80rem;
+        width: 100%;
+        height: 30rem;
+    }
 
 }

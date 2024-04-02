@@ -60,7 +60,5 @@ function hideButton(){
   if(facts.length===counter.value){
     this.isActive=false;
   }
-  console.log("facts",facts.length);
-  console.log("counter",counter.value);
 }
 </script>

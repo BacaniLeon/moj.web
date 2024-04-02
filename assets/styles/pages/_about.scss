@@ -4,6 +4,10 @@
     width: 100%;
     margin: 0 auto;
     display: block;
+    @include media('<=tablet'){
+        max-width: 400rem;
+    }
+    
 }
 
 .aboutMe__Facts{
@@ -14,14 +18,28 @@
     background-color: rgba(8, 249, 255, 0.2);
     padding: 100rem 0 150rem;
     margin-bottom: 50rem;
+    @include media('<=tablet'){
+        width: 90%;
+        margin: 0rem auto 50rem;
+        padding: 0;
+    }
     img{
         max-width: 600rem;
         margin:auto;
         background-color: white;
+        @include media('<=tablet'){
+            margin: 50rem auto;
+            max-width: 300rem;
+        }
     }
     h2{
         margin: 0 auto;
         padding-bottom: 50rem;
+        @include media('<=tablet'){
+            font-size: 30rem;
+            padding: 0;
+            margin: 30rem;
+        }
     }
     p{margin:auto}
     h2::before {
@@ -32,14 +50,29 @@
 
 .aboutMe__FactsParagraf{
     display: flex;
+    @include media('<=tablet'){
+        display: grid;
+    }
+    p{
+        @include media('<=tablet'){
+            max-width: none;
+            font-size: 16rem;
+            width: 80%;
+        }
+    }
 }
 
 .aboutMe__FactsDugiParagraf{
     display: grid;
     p{
-        margin:auto;
+        margin:50rem auto;
         max-width: 1000rem;
-        padding-bottom: 50rem;
+        @include media('<=tablet'){
+            margin: auto;
+            max-width: none;
+            font-size: 16rem;
+            width: 80%;
+        }
     }
 }
 
@@ -67,5 +100,10 @@
     font-size: 25rem;
     font-weight: 750;
     margin-bottom: 50rem;
+    @include media('<=tablet'){
+        max-width: 100rem;
+        height: 30rem;
+        font-size: 12rem;
+    }
 }
 
