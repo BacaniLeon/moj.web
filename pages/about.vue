@@ -59,7 +59,7 @@ const hideButton = computed(() => {
   number.value++;
   console.log("number: ", number);
   if(facts.length===number.value){
-    this.isActive=false;
+    isActive.value=false;
   }
 })
 </script>

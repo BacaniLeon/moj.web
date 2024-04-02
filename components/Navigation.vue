@@ -1,7 +1,7 @@
 <template>
   <nav :class="[{navBar__MobileMenu: menuHidden}, 'navBar']">
     <img src="../public/resources/images/logo.svg">
-    <img src="../public/resources/images/menu.png" class="navBar__Menu" @click="showMenu()">
+    <img src="../public/resources/images/menu.png" class="navBar__Menu" @click="showMenu">
     <div class="navBar__Div">
     <NuxtLink to="/">HOME</NuxtLink>
     <NuxtLink to="/about">ABOUT ME</NuxtLink>
@@ -14,9 +14,10 @@
 
 <script setup>
 
-var menuHidden = ref(false);
-function showMenu(){
-  this.menuHidden=!this.menuHidden;
-}
+const menuHidden = ref(false);
+
+const showMenu = computed(() => {
+ menuHidden.value=!menuHidden.value;
+})
   
 </script>
