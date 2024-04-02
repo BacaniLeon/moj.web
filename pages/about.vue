@@ -20,6 +20,7 @@
 
 <script setup>
 const counter=ref(1);
+console.log(counter);
 const isActive=ref(true);
 const facts = [
   {
