@@ -1,11 +1,9 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
 .aboutMe{
     max-width: 1200rem;
     width: 100%;
     margin: 0 auto;
     display: block;
-    h1{
-        max-width: 800rem;
-    }
 }
 
 .aboutMe__Facts{
@@ -19,6 +17,7 @@
     img{
         max-width: 600rem;
         margin:auto;
+        background-color: white;
     }
     h2{
         margin: 0 auto;
@@ -50,6 +49,10 @@
     }
 }
 
+.aboutMe__ButtonHidden{
+    display: none;
+}
+
 .aboutMe__ButtonDiv{
     width: 100%;
     display: flex;
@@ -57,12 +60,12 @@
 }
 
 .aboutMe__Button{
-    width: 150rem;
+    max-width: 200rem;
     background-color: rgba(8, 249, 255, 0.2);
     border-radius: 20rem;
     height: 70rem;
     font-size: 25rem;
     font-weight: 750;
     margin-bottom: 50rem;
-    
 }
+

@@ -1,24 +1,44 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+html{
+    overflow-x: hidden;
+}
 .prviDio{
     width: 90%;
     margin: 0 auto;
     display: block;
+    @include media('<=tablet'){
+        width: 100%;
+    }
+    h1{
+        @include media('<=tablet'){
+            font-size: 40rem;
+            margin: 100rem auto 0;
+        }
+    }
 }
 
 .prviDio__Opis{
     width: 100%;
     display: flex;
     margin-bottom: 100rem;
-}
-
-.prviDio__Opis + .prviDio__Opis{
-    padding: 40rem 0;
-    margin-bottom: 50rem;
-    background-color: #08f9ff33;
+    @include media('<=tablet'){
+        width: 80%;
+        display: block;
+        margin: 0 auto;   
+        
+        p{
+            font-size: 20rem;
+        }
+    }
 }
 
 .swiperDiv{
     max-width: 450rem;
     margin:auto 120rem;
+    @include media('<=tablet'){
+        width: 100%;
+        margin: 50rem auto;
+    }
 }
 
 .swiper-slide img{

@@ -1,3 +1,4 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
 html{
     background-color:#282828;
     scroll-behavior: smooth;
@@ -68,4 +69,7 @@ h4{
     width: 30rem;
     height: 30rem;
     z-index: 100;
+    @include media('<=tablet'){
+        display: none;
+    }
 }

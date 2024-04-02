@@ -1,3 +1,4 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
 .contactMe{
     display: flex;
     
@@ -45,12 +46,11 @@
 
 input{
     margin: 0 10rem 20rem;
-    width: 320rem;
+    width: 100%;
+    max-width: 320rem;
     height: 40rem;
     text-align: center;
     border-radius: 10rem;
-    background: linear-gradient(180deg, rgba(254, 201, 0, 0) 69.46%,  100%);
-    
 }
 
 textarea{

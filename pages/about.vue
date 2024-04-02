@@ -10,7 +10,9 @@
             <img :src="fact.photo">
           </div>
       </div>
-      <div class="aboutMe__ButtonDiv"><button @click="counter++" class="aboutMe__Button">Load More</button></div>
+      <div :class="[{aboutMe__ButtonDiv: isActive}, 'aboutMe__ButtonHidden']">
+        <button @click="hideButton()" class="aboutMe__Button" >Load More</button>
+      </div>
       
   </div>
   <Footer />
@@ -18,7 +20,16 @@
 
 <script setup>
 const counter=ref(1);
+const isActive=ref(true);
 const facts = [
+  {
+    class: "aboutMe__FactsDugiParagraf",
+    title: "Education",
+    paragraf:
+      "My education starts from the elementary school, 'OŠ Voltino'. After 8 years and finishing elementary school, I choose to apply and attend 'Tehničku Školu Zagreb', after successfully finishing the 4 years and making a graduation project (a game 'Parkour' using Unity) I decided on attending TVZ, and currently am in process of getting bachelor degree in programming and computer science.  ",
+    photo: "../resources/images/tvz.svg",
+  },
+
   {
     class: "aboutMe__FactsParagraf",
     title: "Sports",
@@ -43,4 +54,13 @@ const facts = [
     photo: "../resources/images/maneskin.jpeg",
   },
 ];
+
+function hideButton(){
+  this.counter++;
+  if(facts.length===counter.value){
+    this.isActive=false;
+  }
+  console.log("facts",facts.length);
+  console.log("counter",counter.value);
+}
 </script>
