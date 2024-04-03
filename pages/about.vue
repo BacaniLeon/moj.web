@@ -3,17 +3,17 @@
   <BackToTop/>
   <div class="aboutMe">
     <h1> THINGS TO KNOW ABOUT ME</h1>
-      <div class="aboutMe__Facts" v-for="fact in facts.slice(0,number)">
+      <div class="aboutMe__Facts" v-for="fact in facts" 
+      v-motion 
+      :initial="{opacity: 0, y:250}"
+      :visible-once="{opacity: 1, y:0}"
+      :delay=100>
         <h2>{{ fact.title }}</h2>
           <div :class=fact.class>
             <p>{{ fact.paragraf }}</p>
             <img :src="fact.photo">
           </div>
       </div>
-      <div :class="[{aboutMe__ButtonDiv: isActive}, 'aboutMe__ButtonHidden']">
-        <button @click="hideButton" class="aboutMe__Button" >Load More</button>
-      </div>
-      
   </div>
   <Footer />
 </template>
@@ -55,11 +55,4 @@ const facts = [
   },
 ];
 
-const hideButton = computed(() => {
-  number.value++;
-  console.log("number: ", number);
-  if(facts.length===number.value){
-    isActive.value=false;
-  }
-})
 </script>

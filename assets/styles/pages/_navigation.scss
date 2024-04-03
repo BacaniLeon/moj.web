@@ -23,7 +23,7 @@
         font-weight: bold;
         padding: 25rem;
         @include media('<=tablet'){
-            display: none;
+            
             padding: 0;
         }
     }
@@ -70,6 +70,14 @@
             position: relative;
             left: 0;
         }
+    }
+}
+
+.navBar__LogoLink:hover, .navBar__LogoLink.router-link-exact-active{
+    @include media('>=tablet'){
+   border-bottom: 0rem !important;
+   background: none !important;
+   background-color: none !important;
     }
 }
 

@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@vueuse/motion": "^2.1.0",
     "include-media": "^2.0.0",
     "nuxt": "^3.11.1",
     "sass": "^1.72.0",

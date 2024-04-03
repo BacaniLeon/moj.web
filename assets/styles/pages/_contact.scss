@@ -5,17 +5,20 @@
     max-width: 1200rem;
     padding: 20rem 40rem;
     width: 70%;
-    background-color: #08f9ff33;
-    margin: 200rem auto 80rem;
+    background-color: #007f96;
+    border: 5rem solid;
     border-radius: 20rem;
+    margin: 200rem auto 80rem;
     gap: 70rem;
     @include media('<=tablet'){
         display: block;
+        border: 3rem solid;
         max-width: 400rem;
         margin: 100rem auto 30rem;
     }
     h1{
         font-size: 50rem;
+        color: white;
         margin: 10rem auto;
         width: 300rem;
         font-stretch: normal;
@@ -113,7 +116,7 @@ textarea::placeholder{
     height: 50rem;
     margin: 20rem auto;
     border-radius: 10rem;
-    background-color: aquamarine;
+    background-color: rgb(90, 153, 248);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24rem;
     font-weight: 750;

@@ -15,10 +15,14 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(8, 249, 255, 0.2);
     padding: 100rem 0 150rem;
     margin-bottom: 50rem;
+    background-color: #007f96;
+    border: 5rem solid;
+    border-radius: 40rem;
     @include media('<=tablet'){
+        border: 3rem solid;
+    border-radius: 20rem;
         width: 90%;
         margin: 0rem auto 50rem;
         padding: 0;

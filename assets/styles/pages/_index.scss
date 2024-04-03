@@ -6,6 +6,9 @@ html{
     width: 90%;
     margin: 0 auto;
     display: block;
+    h1{
+        padding: 20rem 0;
+    }
     @include media('<=tablet'){
         width: 100%;
     }
@@ -15,12 +18,18 @@ html{
     width: 100%;
     display: flex;
     margin-bottom: 100rem;
+    background-color: #007f96;
+    border: 5rem solid;
+    border-radius: 40rem;
+    padding: 50rem 0;
     @include media('<=tablet'){
-        width: 80%;
+        border: 3rem solid;
+        border-radius: 20rem;
+        width: 90%;
         display: block;
-        margin: 0 auto;   
-        
+        margin: 0 auto 50rem;   
         p{
+            width: 80%;
             font-size: 30rem;
             line-height: 30rem;
         }
@@ -31,7 +40,7 @@ html{
     max-width: 450rem;
     margin:auto 120rem;
     @include media('<=tablet'){
-        width: 100%;
+        width: 80%;
         margin: 50rem auto;
     }
 }

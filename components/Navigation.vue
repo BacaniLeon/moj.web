@@ -1,6 +1,6 @@
 <template>
   <nav :class="[{navBar__MobileMenu: menuHidden}, 'navBar']">
-    <img src="../public/resources/images/logo.svg">
+    <NuxtLink to="/" class="navBar__LogoLink"><img src="../public/resources/images/logo.svg"></NuxtLink>
     <img src="../public/resources/images/menu.png" class="navBar__Menu" @click="showMenu">
     <div class="navBar__Div">
     <NuxtLink to="/" @click="changeOverflow()">HOME</NuxtLink>
