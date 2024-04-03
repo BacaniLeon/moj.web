@@ -56,7 +56,8 @@
     p{
         @include media('<=tablet'){
             max-width: none;
-            font-size: 16rem;
+            font-size: 22rem;
+            line-height: 24rem;
             width: 80%;
         }
     }
@@ -70,8 +71,9 @@
         @include media('<=tablet'){
             margin: auto;
             max-width: none;
-            font-size: 16rem;
-            width: 80%;
+            font-size: 22rem;
+            line-height: 24rem;
+            width: 90%;
         }
     }
 }

@@ -8,19 +8,35 @@
     justify-content: center;
     background-color: #08f9ff33;
     @include media('<=tablet'){
-        width: 80%;
+        width: 90%;
+    }
+    h2{
+        @include media('<=tablet'){
+            font-size: 20rem;
+        }
+        
     }
     h2::before {
         counter-increment: section;
         content:counter(section) ". ";
-      }
-      h4{margin: 0 auto}
+    }
+    h3{
+        @include media('<=tablet'){
+            font-size: 20rem;
+        }
+    }
+      h4{margin: 0 auto;
+        @include media('<=tablet'){
+            font-size: 20rem;
+        }}
 }
 
 .myExperience__Exp{
-    @extend .myExperience;
     display:flex;
+    background-color: #08f9ff33;
     @include media('<=tablet'){
+        gap: 5rem;
+        flex-direction: column;
         max-width: 350rem;
         margin: 50rem auto;
     }
@@ -35,6 +51,8 @@
         @include media('<=tablet'){
             max-width: 300rem;
             padding: 30rem 0;
+            font-size: 25rem;
+            line-height: 25rem;
         }
     }
 }

@@ -20,7 +20,7 @@
         width: 300rem;
         font-stretch: normal;
         @include media('<=tablet'){
-            font-size: 30rem;
+            font-size: 40rem;
             width: 100%;
         }
     }
@@ -53,7 +53,6 @@
     display: flex;
     @include media('<=tablet'){
         flex-direction: column;
-        max-width: 200rem;
         margin: 0 auto;
     }
 }
@@ -64,7 +63,6 @@
     display: flex;
     @include media('<=tablet'){
         flex-direction: column;
-        max-width: 200rem;
         margin: 0 auto;
     }
     
@@ -77,9 +75,13 @@ input{
     height: 40rem;
     text-align: center;
     border-radius: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16rem;
+    font-weight: 750;
     @include media('<=tablet'){
         margin: 5rem auto;
-        height: 20rem;
+        font-size: 12rem;
+        height: 30rem;
         max-width: 200rem;
     }
 }
@@ -89,11 +91,20 @@ textarea{
     height: 150rem;
     margin: 0 auto;
     border-radius: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24rem;
+    font-weight: 750;
     @include media('<=tablet'){
+        font-size: 12rem;
         max-width: 200rem;
         height: 70rem;
         margin: 10rem auto;
     }
+}
+
+textarea::placeholder{
+    text-align: center;
+    
 }
 
 .contactMe__Submit{
@@ -103,10 +114,15 @@ textarea{
     margin: 20rem auto;
     border-radius: 10rem;
     background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24rem;
+    font-weight: 750;
     @include media('<=tablet'){
+        font-size: 12rem;
         max-width: 80rem;
         width: 100%;
         height: 30rem;
+        
     }
 
 }
