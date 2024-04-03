@@ -2,6 +2,7 @@
 html{
     overflow-x: hidden;
 }
+
 .prviDio{
     width: 90%;
     margin: 0 auto;
@@ -11,23 +12,21 @@ html{
     }
     @include media('<=tablet'){
         width: 100%;
+        padding: 0;
+        margin: 100rem auto;
     }
 }
 
-.prviDio__Opis{
+.prviDio__Description{
     width: 100%;
     display: flex;
     margin-bottom: 100rem;
-    background-color: #007f96;
-    border: 5rem solid;
-    border-radius: 40rem;
     padding: 50rem 0;
     @include media('<=tablet'){
-        border: 3rem solid;
-        border-radius: 20rem;
+        padding: 0rem;
         width: 90%;
         display: block;
-        margin: 0 auto 50rem;   
+        margin: 0 auto;   
         p{
             width: 80%;
             font-size: 30rem;

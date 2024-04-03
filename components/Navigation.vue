@@ -2,12 +2,12 @@
   <nav :class="[{navBar__MobileMenu: menuHidden}, 'navBar']">
     <NuxtLink to="/" class="navBar__LogoLink"><img src="../public/resources/images/logo.svg"></NuxtLink>
     <img src="../public/resources/images/menu.png" class="navBar__Menu" @click="showMenu">
-    <div class="navBar__Div">
-    <NuxtLink to="/" @click="changeOverflow()">HOME</NuxtLink>
-    <NuxtLink to="/about" @click="changeOverflow()" >ABOUT ME</NuxtLink>
-    <NuxtLink to="/my-experience" @click="changeOverflow()">EXPERIENCE</NuxtLink>
-    <NuxtLink to="/contact" class="navBar__Button" @click="changeOverflow()">CONTACT</NuxtLink>
-  </div>
+    <ul>
+      <li><NuxtLink to="/" @click="changeOverflow()">HOME</NuxtLink></li>
+      <li><NuxtLink to="/about" @click="changeOverflow()" >ABOUT ME</NuxtLink></li>
+      <li><NuxtLink to="/my-experience" @click="changeOverflow()">EXPERIENCE</NuxtLink></li>
+      <li><NuxtLink to="/contact" class="navBar__Button" @click="changeOverflow()">CONTACT</NuxtLink></li>
+  </ul>
     
   </nav>
 </template>

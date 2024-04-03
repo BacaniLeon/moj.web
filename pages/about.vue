@@ -5,9 +5,15 @@
     <h1> THINGS TO KNOW ABOUT ME</h1>
       <div class="aboutMe__Facts" v-for="fact in facts" 
       v-motion 
-      :initial="{opacity: 0, y:250}"
-      :visible-once="{opacity: 1, y:0}"
-      :delay=100>
+      :initial="{opacity: 0,y:200}"
+      :visible-once="{y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 250,
+      damping: 100,
+      mass: 35,
+    },}">
         <h2>{{ fact.title }}</h2>
           <div :class=fact.class>
             <p>{{ fact.paragraf }}</p>
@@ -19,11 +25,9 @@
 </template>
 
 <script setup>
-const number = ref(1);
-const isActive=ref(true);
 const facts = [
   {
-    class: "aboutMe__FactsDugiParagraf",
+    class: "aboutMe__FactsLongParagraf",
     title: "Education",
     paragraf:
       "My education starts from the elementary school, 'OŠ Voltino'. After 8 years and finishing elementary school, I choose to apply and attend 'Tehničku Školu Zagreb', after successfully finishing the 4 years and making a graduation project (a game 'Parkour' using Unity) I decided on attending TVZ, and currently am in process of getting bachelor degree in programming and computer science.  ",
@@ -47,7 +51,7 @@ const facts = [
   },
 
   {
-    class: "aboutMe__FactsDugiParagraf",
+    class: "aboutMe__FactsLongParagraf",
     title: "Hobbies",
     paragraf:
       "Usually when i have some free time my friends and I will go out for a cup of coffee and just talk for hours, when im at home i enjoy watching good series or movie. On sunny days we play basketball on our local schoolground and every sunday we play in rented gym. Music wise, don't have a preffered genre, like to listen to many different genre, currently my favourite band and last concert i went to see is Måneskin",

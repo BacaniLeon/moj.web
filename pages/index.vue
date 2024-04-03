@@ -1,10 +1,21 @@
 <template>
   <Navigation />
   <BackToTop/>
-  <div class="prviDio">
+  <div class="prviDio"
+  v-motion 
+      :initial="{opacity: 0, y:600}"
+      :visible-once="{y:0,
+      opacity: 1,
+      transition: {
+      type: 'spring',
+      stiffness: 250,
+      damping: 100,
+      mass: 35,
+    },}"
+      :delay=200
+      >
     <h1>LEON BAĆANI</h1>
-    <div class="prviDio__Opis">
-      
+    <div class="prviDio__Description">
       <p>
         Hello, my name is Leon, and this is a little introduction page about me. This is
         created as a practice of Vue. If there is anything you would like to ask 

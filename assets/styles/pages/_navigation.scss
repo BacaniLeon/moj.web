@@ -15,6 +15,31 @@
         height: 42rem;
         top: 20rem;
     }
+    ul{
+        padding: 0;
+        position:absolute;
+        height: 72rem;
+        max-width: 800rem;
+        display: flex;
+        margin: auto;
+        @include media('<=tablet'){
+            display: none;
+            height: 42rem;
+            top: 100rem;
+            flex-direction: column;
+            text-align: center;
+            gap: 50rem;
+            
+        }
+    }
+    li{
+        display: flex;
+        max-width: 250rem;
+        @include media('<=tablet'){
+            display: block;
+            height: 40rem;
+        }
+    }
     a{
         font-size: 25rem;
         text-decoration:none;
@@ -22,9 +47,10 @@
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
         padding: 25rem;
+        margin: 0 25rem;
         @include media('<=tablet'){
-            
             padding: 0;
+            padding: 10rem 20rem;
         }
     }
     a:hover{
@@ -64,7 +90,7 @@
     .navBar__Button{
         position: absolute;
         top: 0;
-        left: 154%;
+        left: 125%;
         bottom: 0;
         @include media('<=tablet'){
             position: relative;
@@ -74,53 +100,11 @@
 }
 
 .navBar__LogoLink:hover, .navBar__LogoLink.router-link-exact-active{
-    @include media('>=tablet'){
+   
    border-bottom: 0rem !important;
    background: none !important;
    background-color: none !important;
-    }
-}
-
-.navBar__Div{  
-    position:absolute;
-    height: 72rem;
-    max-width: 800rem;
-    display: flex;
     
-    @include media('<=tablet'){
-        height: 42rem;
-        top: 100rem;
-        flex-direction: column;
-        text-align: center;
-        gap: 50rem;
-        
-    }
-    a{
-        font-size: 25rem;
-        text-decoration:none;
-        color:bisque;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        padding: 25rem;
-        @include media('<=tablet'){
-            display: none;
-            padding: 0;
-        }
-    }
-    a:hover{
-        border-bottom: 7rem solid #08f9ff;
-        background: linear-gradient(0deg, #08f9ff33,transparent);
-        transition: 0.2s;
-        @include media('<=tablet'){
-            border-bottom: 2rem solid #08f9ff;
-        }
-    }
-    a.router-link-exact-active{
-        background-color:  #08f9ff33; 
-        @include media('<=tablet'){
-            padding: 15rem;
-        }
-    }
 }
 
 .navBar__MobileMenu{
@@ -137,8 +121,10 @@
     display: flex;
     justify-content: center;
     z-index: 100;
+    ul{
+        display: flex;
+    }
     a{
-        display: block;
         font-size: 20rem;
     }
     img{

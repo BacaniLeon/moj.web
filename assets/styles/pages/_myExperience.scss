@@ -4,11 +4,8 @@
     width: 100%;
     max-width: 1200rem;
     margin: 50rem auto;
-    background-color: #007f96;
-    border: 5rem solid;
     @include media('<=tablet'){
         width: 90%;
-        border: 3rem solid;
     }
     h2{
         @include media('<=tablet'){
@@ -33,7 +30,6 @@
 
 .myExperience__Exp{
     display:flex;
-    background-color: #08f9ff33;
     gap: 20rem;
     justify-content: center;
     @include media('<=tablet'){
@@ -57,4 +53,9 @@
             line-height: 25rem;
         }
     }
+}
+
+.swiper-pagination{
+    font-size: 20rem;
+    color: white !important;
 }

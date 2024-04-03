@@ -5,14 +5,11 @@
     max-width: 1200rem;
     padding: 20rem 40rem;
     width: 70%;
-    background-color: #007f96;
-    border: 5rem solid;
-    border-radius: 20rem;
     margin: 200rem auto 80rem;
     gap: 70rem;
     @include media('<=tablet'){
         display: block;
-        border: 3rem solid;
+       
         max-width: 400rem;
         margin: 100rem auto 30rem;
     }
