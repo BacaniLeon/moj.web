@@ -109,6 +109,9 @@
     }
     a.router-link-exact-active{
         background-color:  #08f9ff33; 
+        @include media('<=tablet'){
+            padding: 15rem;
+        }
     }
 }
 
