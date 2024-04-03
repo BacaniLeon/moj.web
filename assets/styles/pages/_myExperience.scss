@@ -34,6 +34,8 @@
 .myExperience__Exp{
     display:flex;
     background-color: #08f9ff33;
+    gap: 20rem;
+    justify-content: center;
     @include media('<=tablet'){
         gap: 5rem;
         flex-direction: column;
