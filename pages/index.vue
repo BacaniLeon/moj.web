@@ -1,5 +1,5 @@
 <template>
-  <Navigation />
+  <Navigation v-show="isVisible"/>
   <BackToTop/>
   <div class="welcome">
   <h2>Welcome!</h2>
@@ -49,7 +49,7 @@
     </div>
   </div>
 </div>
-  <Footer class="footerHidden"/>
+  <Footer v-show="isVisible"/>
 </template>
 
 <script setup>
@@ -64,10 +64,8 @@ const isVisible = ref(false);
 const remove = computed(() => {
   isVisible.value=!isVisible.value;
   var showElement = document.querySelector(".welcome");
-  var footer = document.querySelector(".footerHidden");
   if(isVisible.value==true){
   showElement.style.display="none";
-  footer.style.display="block";
   }
 })
   
