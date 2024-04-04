@@ -49,7 +49,7 @@
     </div>
   </div>
 </div>
-  <Footer/>
+  <Footer class="footerHidden"/>
 </template>
 
 <script setup>
@@ -64,8 +64,10 @@ const isVisible = ref(false);
 const remove = computed(() => {
   isVisible.value=!isVisible.value;
   var showElement = document.querySelector(".welcome");
+  var footer = document.querySelector(".footerHidden");
   if(isVisible.value==true){
   showElement.style.display="none";
+  footer.style.display="block";
   }
 })
   
