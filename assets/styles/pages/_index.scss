@@ -3,6 +3,32 @@ html{
     overflow-x: hidden;
 }
 
+.welcome{
+    display: grid;
+    max-width: 800rem;
+    margin: 200rem auto 14rem;
+    justify-content: center;
+    @include media('<=tablet'){
+        margin: 100rem auto 14rem;
+    }
+    h2{
+        @include media('<=tablet'){
+            font-size:30rem;
+            padding: 10rem;
+        }
+    }
+    p{
+        font-size: 25rem;
+        @include media('<=tablet'){
+            font-size: 15rem;
+        }
+    }
+    img{
+        margin: auto;
+        width: 150rem;
+    };
+}
+
 .prviDio{
     width: 90%;
     margin: 0 auto;

@@ -17,6 +17,7 @@
     "swiper": "^11.1.0",
     "vue": "^3.4.21",
     "vue-flickity": "^1.2.1",
+    "vue-intersection-observer": "^0.1.9",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {

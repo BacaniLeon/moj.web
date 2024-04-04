@@ -1,9 +1,14 @@
 <template>
   <Navigation />
   <BackToTop/>
-  <div class="prviDio"
+  <div class="welcome">
+  <h2>Welcome!</h2>
+  <p>Press to see more</p>
+  <img src="../public/resources/images/clickme.gif" @click="remove">
+  </div>
+  <div class="prviDio" v-if="isVisible"
   v-motion 
-      :initial="{opacity: 0, y:600}"
+      :initial="{opacity: 0, y:400}"
       :visible-once="{y:0,
       opacity: 1,
       transition: {
@@ -53,6 +58,17 @@ import { Autoplay, Pagination, EffectCards } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
+
+
+const isVisible = ref(false);
+const remove = computed(() => {
+  isVisible.value=!isVisible.value;
+  var showElement = document.querySelector(".welcome");
+  if(isVisible.value==true){
+  showElement.style.display="none";
+  }
+})
+  
 
 
 const photos = [

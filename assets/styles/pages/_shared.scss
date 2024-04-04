@@ -99,7 +99,7 @@ h4{
     height: 30rem;
     z-index: 100;
     @include media('<=tablet'){
-        width: 15rem;
-        height: 15rem;
+        width: 25rem;
+        height: 25rem;
     }
 }
