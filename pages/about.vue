@@ -30,7 +30,7 @@ const facts = [
     class: "aboutMe__FactsLongParagraf",
     title: "Education",
     paragraf:
-      "My education starts from the elementary school, 'OŠ Voltino'. After 8 years and finishing elementary school, I choose to apply and attend 'Tehničku Školu Zagreb', after successfully finishing the 4 years and making a graduation project (a game 'Parkour' using Unity) I decided on attending TVZ, and currently am in process of getting bachelor degree in programming and computer science.  ",
+      "My educational journey began at elementary school, 'OŠ Voltino'. Following eight years there, I opted to pursue my studies at 'Tehnička Škola Zagreb'. Upon successfully completing the four-year program and presenting my graduation project (a game titled 'Parkour' developed using Unity), I made the decision to enroll at TVZ. Presently, I am in the process of earning my bachelor's degree in programming and computer science.  ",
     photo: "../resources/images/tvz.svg",
   },
 
@@ -38,7 +38,7 @@ const facts = [
     class: "aboutMe__FactsParagraf",
     title: "Sports",
     paragraf:
-      "From young age I have tried multiple different sports. Some of those sports are football, badminton, taekwondo, but the one that stuck with me is basketball. I trained it for 6 years and am still to this day huge NBA fan. My favourite team is Dallas Mavericks and favourite player Luka Dončić",
+      "From a young age, I explored various sports, including football, badminton, and taekwondo. However, it was basketball that truly captivated me. I dedicated six years to training in basketball and remain a passionate NBA fan to this day. My favorite team is the Dallas Mavericks, and I admire Luka Dončić as my favorite player.",
     photo: "../resources/images/lukadoncic.jpg",
   },
 
@@ -46,7 +46,7 @@ const facts = [
     class: 'aboutMe__FactsParagraf',
     title: "Animals",
     paragraf:
-      "I love animals, i had a rabbit when i was a kid and after him we got 2 dogs, 'Bono' and 'Boki'. All animals are special in their own way, but in my opinion dogs are the best!",
+      "I have always had a profound love for animals. As a child, I cherished my pet rabbit, and later, our family welcomed two beloved dogs named 'Bono' and 'Boki' into our home. While every animal holds a special place in my heart, I have a particular fondness for dogs, I believe they are truly remarkable companions!",
     photo: "../resources/images/bokibono.jpeg",
   },
 
@@ -54,7 +54,7 @@ const facts = [
     class: "aboutMe__FactsLongParagraf",
     title: "Hobbies",
     paragraf:
-      "Usually when i have some free time my friends and I will go out for a cup of coffee and just talk for hours, when im at home i enjoy watching good series or movie. On sunny days we play basketball on our local schoolground and every sunday we play in rented gym. Music wise, don't have a preffered genre, like to listen to many different genre, currently my favourite band and last concert i went to see is Måneskin",
+      "During my free time, I often enjoy catching up with friends over a cup of coffee, engaging in long conversations that stretch for hours. At home, I find relaxation in watching compelling series or movies. On sunny days, you'll often find me on the local schoolground, playing basketball with friends, and every Sunday, we rent a gym to continue our basketball sessions. Regarding music, I don't have a preferred genre; instead, I appreciate a wide variety of musical styles. Currently, my favorite band is Måneskin, and I recently attended one of their concerts, which was an incredible experience.",
     photo: "../resources/images/maneskin.jpeg",
   },
 ];

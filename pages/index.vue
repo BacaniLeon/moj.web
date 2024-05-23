@@ -22,9 +22,8 @@
     <h1>LEON BAĆANI</h1>
     <div class="prviDio__Description">
       <p>
-        Hello, my name is Leon, and this is a little introduction page about me. This is
-        created as a practice of Vue. If there is anything you would like to ask 
-        or complain about feel free to <NuxtLink to="/contact">contact me.</NuxtLink>
+        Hello, my name is Leon, and this is a brief introduction page about me. This page was created as a practice project using Vue. If you have any questions or feedback, please don't hesitate to <NuxtLink to="/contact">contact me.</NuxtLink>
+        
       </p>
    
 

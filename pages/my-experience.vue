@@ -15,6 +15,10 @@
           :cube-effect="{
             shadow:false
           }"
+          :autoplay="{
+          delay: 30000,
+          disableOnInteraction: true,
+        }"
           >
         <SwiperSlide v-for="exp in experience">
         <div class="myExperience__Exp">
@@ -44,14 +48,14 @@ const experience = [
   {
     job: "Operations Agent",
     place: "DHL Express Croatia:",
-    description: "Have been working in DHL every summer break in college and from june 2021 till october 2022 the whole year. Worked as a courier, driving and delivering packages, worked inside the warehouse where i handled 3rd party packages. Worked in MS Excel, Word, Outlook.",
+    description: "Throughout my college summers and from June 2021 to October 2022, I gained valuable experience working at DHL. Initially, I served as a courier, responsible for driving and delivering packages efficiently. Subsequently, I transitioned to roles within the warehouse, where I handled third-party packages with meticulous care. During my time at DHL, I also honed my skills in Microsoft Excel, Word, and Outlook, effectively leveraging these tools to streamline processes and enhance productivity.",
     duration: "Jun 2019 - Sep 2023",
   },
 
   {
     job: "Frontend Intern",
     place: "SHAPE:",
-    description: "Did my internship in SHAPE 404. Worked on real life projects in Vue.js environment. Learned Vue3 and Nuxt in order to finish my assigments on time.",
+    description: "During my internship at SHAPE 404, I had the opportunity to work on real-life projects within a Vue.js environment. Through hands-on experience, I mastered Vue3 and Nuxt frameworks, enabling me to efficiently complete assignments within specified deadlines. This experience not only enhanced my technical skills but also provided valuable insight into working on professional projects in a dynamic environment.",
     duration: "Mar 2024 - Mar 2024",
   },
 
