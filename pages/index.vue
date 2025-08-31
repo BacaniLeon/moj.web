@@ -22,8 +22,9 @@
     <h1>LEON BAĆANI</h1>
     <div class="prviDio__Description">
       <p>
-        Hello, my name is Leon, and this is a brief introduction page about me. This page was created as a practice project using Vue. If you have any questions or feedback, please don't hesitate to <NuxtLink to="/contact">contact me.</NuxtLink>
-        
+        Hello, my name is Leon, I hold a Bachelor’s degree in Computer Engineering (bacc. ing. comp.) from the Zagreb University of Applied Sciences (TVZ).
+        Currently, I am working as a QA Engineer at ReversingLabs in Zagreb, where I am gaining valuable industry experience. In my free time, I develop web pages using Nuxt.js environment, you can check out my projects on my linkedin page
+        I consider myself hardworking, adaptable, and eager to learn. I thrive in dynamic environments and continuously seek opportunities to expand my knowledge and improve my skills in order to deliver high-quality results. If you have any questions or feedback, please don't hesitate to <NuxtLink to="/contact">contact me.</NuxtLink>
       </p>
    
 
@@ -42,7 +43,7 @@
         }"
       >
         <SwiperSlide v-for="photo in photos">
-          <img :src="photo.url" />
+          <img class="img__ForHomePage":src="photo.url" />
         </SwiperSlide>
       </Swiper>
     </div>
@@ -72,7 +73,9 @@ const remove = computed(() => {
 
 const photos = [
   { url: "../resources/images/ja1.jpeg" },
-  { url: "../resources/images/ja3.jpeg" },
   { url: "../resources/images/ja2.jpeg" },
+  { url: "../resources/images/ja3.jpeg" },
+  
+
 ];
 </script>

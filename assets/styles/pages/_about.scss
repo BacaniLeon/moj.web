@@ -11,12 +11,12 @@
 }
 
 .aboutMe__Facts{
-    max-width: 1200rem;
+    max-width: 1000rem;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 100rem 0 150rem;
-    margin-bottom: 50rem;
+    padding: 30rem  30rem;
+    margin: 0 auto 50rem;
     background-color: #007f962f;
     border-radius: 40rem;
     @include media('<=tablet'){
@@ -27,7 +27,7 @@
         padding: 0;
     }
     img{
-        max-width: 600rem;
+        max-width: 400rem;
         margin:auto;
         background-color: white;
         @include media('<=tablet'){
@@ -37,11 +37,10 @@
     }
     h2{
         margin: 0 auto;
-        padding-bottom: 50rem;
         @include media('<=tablet'){
-            font-size: 30rem;
+            font-size: 24rem;
             padding: 0;
-            margin: 30rem;
+            margin: 10rem;
         }
     }
     p{margin:auto}
@@ -59,7 +58,7 @@
     p{
         @include media('<=tablet'){
             max-width: none;
-            font-size: 22rem;
+            font-size: 16rem;
             line-height: 24rem;
             width: 80%;
         }
@@ -74,7 +73,7 @@
         @include media('<=tablet'){
             margin: auto;
             max-width: none;
-            font-size: 22rem;
+            font-size: 16rem;
             line-height: 24rem;
             width: 90%;
         }

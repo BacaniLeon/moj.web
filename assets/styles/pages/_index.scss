@@ -33,9 +33,6 @@ html{
     width: 90%;
     margin: 0 auto;
     display: block;
-    h1{
-        padding: 20rem 0;
-    }
     @include media('<=tablet'){
         width: 100%;
         padding: 0;
@@ -55,14 +52,14 @@ html{
         margin: 0 auto;   
         p{
             width: 80%;
-            font-size: 30rem;
-            line-height: 30rem;
+            font-size: 16rem;
+            line-height: 1.2;
         }
     }
 }
 
 .swiperDiv{
-    max-width: 450rem;
+    max-width: 300rem;
     margin:auto 120rem;
     @include media('<=tablet'){
         width: 80%;
@@ -85,4 +82,8 @@ a{
 
 .navHidden{
     display: none;
+}
+
+.img__ForHomePage{
+    max-width: 500rem;
 }

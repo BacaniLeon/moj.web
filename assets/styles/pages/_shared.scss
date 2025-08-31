@@ -19,16 +19,16 @@ body{
 
 h1{
     max-width: 800rem;
-    font-size: 100rem;
+    font-size: 40rem;
     line-height: 100rem;
     font-weight: 750;
     text-align: center;
     font-stretch: condensed;
-    margin: 50rem auto;
+    margin: 0rem auto;
     color:white;
-    margin-top: 200rem;
+    margin-top: 130rem;
     @include media('<=tablet'){
-        font-size: 40rem;
+        font-size: 28rem;
         margin: 100rem auto 40rem;
         line-height: 50rem;
     }
@@ -37,20 +37,20 @@ h1{
 p{
     max-width: 500rem;
     width: 100%;
-    font-size: 50rem;
+    font-size: 28rem;
     text-align: center;
     margin:0 auto;
     color:white;
     @include media('<=tablet'){
-        font-size: 15rem;
-        line-height: 20rem;
+        font-size: 16rem;
+        line-height: 1.2;
     }
 }
 
 h2{
     max-width: 800rem;
-    font-size: 50rem;
-    line-height: 100rem;
+    font-size: 40rem;
+    line-height: 1.2;
     font-weight: 750;
     text-align: center;
     margin: 0;
@@ -63,8 +63,8 @@ h2{
 
 h3{
     max-width: 800rem;
-    font-size: 45rem;
-    line-height: 100rem;
+    font-size: 40rem;
+    line-height: 1.2;
     font-weight: 750;
     text-align: center;
     margin: 0;
