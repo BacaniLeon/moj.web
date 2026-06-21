@@ -1,13 +1,15 @@
 <template>
   <nav :class="['navBar', { 'navBar--open': menuOpen, 'navBar--scrolled': scrolled }]">
-    <NuxtLink to="/" class="navBar__brand" @click="closeMenu">
-      <span class="navBar__mark">LB</span>
-      <span class="navBar__name">Leon Baćani</span>
-    </NuxtLink>
+    <div class="navBar__bar">
+      <NuxtLink to="/" class="navBar__brand" @click="closeMenu">
+        <span class="navBar__mark">LB</span>
+        <span class="navBar__name">Leon Baćani</span>
+      </NuxtLink>
 
-    <button class="navBar__toggle" :aria-expanded="menuOpen" aria-label="Toggle menu" @click="toggleMenu">
-      <span></span><span></span><span></span>
-    </button>
+      <button class="navBar__toggle" :aria-expanded="menuOpen" aria-label="Toggle menu" @click="toggleMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
 
     <ul class="navBar__links">
       <li><NuxtLink to="/" @click="closeMenu">Home</NuxtLink></li>
