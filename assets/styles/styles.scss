@@ -1,17 +1,15 @@
 @use 'sass:map';
 @import '../../node_modules/include-media/dist/_include-media.scss';
-@import url('../styles/pages/_index.scss');
-@import url('../styles/pages/_shared.scss');
+@import url('../styles/pages/_base.scss');
 @import url('../styles/pages/_navigation.scss');
+@import url('../styles/pages/_index.scss');
 @import url('../styles/pages/_about.scss');
-@import url('../styles/pages/_contact.scss');
 @import url('../styles/pages/_myExperience.scss');
+@import url('../styles/pages/_contact.scss');
 @import url('../styles/pages/_footer.scss');
-body {
-  font-size: 16px;
-}
+@import url('../styles/pages/_shared.scss');
 
-// Korisiti brojeve bez px, %, itd.
+// Use numbers without px, %, etc. — 1rem scales with viewport.
 $designViewportWidths: (
   mobile: 375,
   largeDesktop: 1440
@@ -22,4 +20,8 @@ html {
   @include media('<=tablet') {
     font-size: calc(100vw / #{map.get($designViewportWidths, 'mobile')});
   }
+}
+
+body {
+  font-size: 16rem;
 }

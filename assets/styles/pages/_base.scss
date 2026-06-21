@@ -1,0 +1,242 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --bg-0: #06060f;
+  --bg-1: #0c0b1f;
+  --bg-2: #14122e;
+
+  --accent-cyan: #08f9ff;
+  --accent-violet: #8b5cf6;
+  --accent-magenta: #ff2e97;
+  --accent-blue: #4f7bff;
+
+  --text-strong: #ffffff;
+  --text-soft: rgba(235, 238, 255, 0.74);
+  --text-faint: rgba(235, 238, 255, 0.5);
+
+  --glass-bg: rgba(255, 255, 255, 0.045);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 24rem 70rem rgba(0, 0, 0, 0.45);
+
+  --grad-brand: linear-gradient(120deg, var(--accent-cyan), var(--accent-violet) 55%, var(--accent-magenta));
+  --grad-text: linear-gradient(110deg, #ffffff 10%, var(--accent-cyan) 45%, var(--accent-magenta) 90%);
+
+  --radius: 24rem;
+  --radius-lg: 34rem;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: var(--bg-0);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text-soft);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   ANIMATED GRADIENT BACKGROUND
+   ============================================================ */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+body::before {
+  background:
+    radial-gradient(40rem 40rem at 18% 22%, rgba(8, 249, 255, 0.18), transparent 60%),
+    radial-gradient(50rem 50rem at 82% 30%, rgba(255, 46, 151, 0.18), transparent 60%),
+    radial-gradient(60rem 60rem at 50% 85%, rgba(139, 92, 246, 0.22), transparent 60%),
+    linear-gradient(160deg, var(--bg-1), var(--bg-0) 55%, var(--bg-2));
+  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+  animation: bgDrift 22s ease-in-out infinite alternate;
+}
+
+/* subtle grid texture overlay */
+body::after {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1rem, transparent 1rem),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1rem, transparent 1rem);
+  background-size: 64rem 64rem;
+  mask-image: radial-gradient(circle at 50% 40%, #000 0%, transparent 75%);
+  opacity: 0.6;
+}
+
+@keyframes bgDrift {
+  0% {
+    background-position: 0% 0%, 100% 0%, 50% 100%, 0 0;
+  }
+  100% {
+    background-position: 100% 50%, 0% 60%, 30% 0%, 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  color: var(--text-strong);
+  margin: 0;
+  line-height: 1.05;
+}
+
+p {
+  color: var(--text-soft);
+  margin: 0;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+a:hover {
+  color: var(--accent-magenta);
+}
+
+/* ============================================================
+   SHARED LAYOUT HELPERS
+   ============================================================ */
+.section {
+  width: min(1180rem, 90%);
+  margin: 0 auto;
+  padding: 90rem 0;
+  @include media('<=tablet') {
+    padding: 60rem 0;
+  }
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  margin-bottom: 18rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 28rem;
+  height: 2rem;
+  background: var(--grad-brand);
+  border-radius: 2rem;
+}
+
+.section-title {
+  font-size: 52rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 14rem;
+  @include media('<=tablet') {
+    font-size: 34rem;
+  }
+}
+
+.section-sub {
+  font-size: 18rem;
+  max-width: 620rem;
+  color: var(--text-faint);
+  margin-bottom: 56rem;
+  @include media('<=tablet') {
+    font-size: 15rem;
+    margin-bottom: 36rem;
+  }
+}
+
+.gradient-text {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* glass card base */
+.glass {
+  background: var(--glass-bg);
+  border: 1rem solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(18rem);
+  -webkit-backdrop-filter: blur(18rem);
+  box-shadow: var(--glass-shadow);
+}
+
+/* buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 16rem 30rem;
+  border-radius: 100rem;
+  cursor: pointer;
+  border: 1rem solid transparent;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.btn--primary {
+  color: #06060f;
+  background: var(--grad-brand);
+  box-shadow: 0 14rem 36rem rgba(139, 92, 246, 0.4);
+}
+
+.btn--primary:hover {
+  transform: translateY(-3rem);
+  box-shadow: 0 20rem 48rem rgba(8, 249, 255, 0.45);
+  color: #06060f;
+}
+
+.btn--ghost {
+  color: var(--text-strong);
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
+}
+
+.btn--ghost:hover {
+  transform: translateY(-3rem);
+  border-color: var(--accent-cyan);
+  color: var(--text-strong);
+}

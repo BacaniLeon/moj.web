@@ -1,113 +1,104 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
-.aboutMe{
-    max-width: 1200rem;
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-    @include media('<=tablet'){
-        max-width: 400rem;
-    }
-    
+
+.aboutHead {
+  padding-top: 160rem;
+  padding-bottom: 20rem;
+  text-align: center;
+  @include media('<=tablet') {
+    padding-top: 120rem;
+  }
 }
 
-.aboutMe__Facts{
-    max-width: 1000rem;
-    width: 100%;
-    display: flex;
+.aboutHead .eyebrow {
+  justify-content: center;
+}
+
+.aboutHead .section-sub {
+  margin: 0 auto;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24rem;
+  padding-top: 10rem;
+  @include media('<=tablet') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aboutCard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+
+.aboutCard:hover {
+  transform: translateY(-8rem);
+  border-color: rgba(8, 249, 255, 0.4);
+}
+
+.aboutCard--wide {
+  grid-column: span 2;
+  flex-direction: row;
+  @include media('<=tablet') {
+    grid-column: span 1;
     flex-direction: column;
-    padding: 30rem  30rem;
-    margin: 0 auto 50rem;
-    background-color: #007f962f;
-    border-radius: 40rem;
-    @include media('<=tablet'){
-        
-    border-radius: 20rem;
-        width: 90%;
-        margin: 0rem auto 50rem;
-        padding: 0;
-    }
-    img{
-        max-width: 400rem;
-        margin:auto;
-        background-color: white;
-        @include media('<=tablet'){
-            margin: 50rem auto;
-            max-width: 300rem;
-        }
-    }
-    h2{
-        margin: 0 auto;
-        @include media('<=tablet'){
-            font-size: 24rem;
-            padding: 0;
-            margin: 10rem;
-        }
-    }
-    p{margin:auto}
-    h2::before {
-        counter-increment: section;
-        content:counter(section) ". ";
-      }
+  }
 }
 
-.aboutMe__FactsParagraf{
-    display: flex;
-    @include media('<=tablet'){
-        display: grid;
-    }
-    p{
-        @include media('<=tablet'){
-            max-width: none;
-            font-size: 16rem;
-            line-height: 24rem;
-            width: 80%;
-        }
-    }
+.aboutCard__media {
+  overflow: hidden;
+  flex: 0 0 auto;
 }
 
-.aboutMe__FactsLongParagraf{
-    display: grid;
-    p{
-        margin:50rem auto;
-        max-width: 1000rem;
-        @include media('<=tablet'){
-            margin: auto;
-            max-width: none;
-            font-size: 16rem;
-            line-height: 24rem;
-            width: 90%;
-        }
-    }
+.aboutCard:not(.aboutCard--wide) .aboutCard__media {
+  height: 220rem;
 }
 
-.aboutMe__Facts:nth-child(odd){
-    .aboutMe__FactsParagraf{
-        flex-direction: row-reverse;
-    }
-}
-
-.aboutMe__ButtonHidden{
-    display: none;
-}
-
-.aboutMe__ButtonDiv{
+.aboutCard--wide .aboutCard__media {
+  width: 42%;
+  @include media('<=tablet') {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    height: 220rem;
+  }
 }
 
-.aboutMe__Button{
-    max-width: 200rem;
-    background-color: rgba(8, 249, 255, 0.2);
-    border-radius: 20rem;
-    height: 70rem;
-    font-size: 25rem;
-    font-weight: 750;
-    margin-bottom: 50rem;
-    @include media('<=tablet'){
-        max-width: 100rem;
-        height: 30rem;
-        font-size: 12rem;
-    }
+.aboutCard__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 24rem;
+  transition: transform 0.5s var(--ease);
 }
 
+.aboutCard:hover .aboutCard__media img {
+  transform: scale(1.05);
+}
+
+.aboutCard__body {
+  padding: 30rem 32rem 34rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutCard__icon {
+  font-size: 30rem;
+  margin-bottom: 12rem;
+}
+
+.aboutCard__title {
+  font-size: 26rem;
+  font-weight: 600;
+  margin-bottom: 14rem;
+}
+
+.aboutCard__body p {
+  font-size: 16rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+}

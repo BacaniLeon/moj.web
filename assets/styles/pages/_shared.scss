@@ -1,105 +1,41 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
-html{
-    background-image: url('../../../public/resources/images/background.gif');
-    background-size: cover;
-    background-attachment: fixed;
-    scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
-    @include media('<=tablet'){
-        background-image: url('../../../public/resources/images/backgroundMobile.gif');
-        background-size: cover;
-        background-attachment: fixed;
-        overflow-x: hidden !important;
-    }
+
+.backToTop {
+  position: fixed;
+  right: 28rem;
+  bottom: 28rem;
+  width: 52rem;
+  height: 52rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #06060f;
+  background: var(--grad-brand);
+  border: none;
+  cursor: pointer;
+  z-index: 90;
+  box-shadow: 0 12rem 30rem rgba(8, 249, 255, 0.35);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), opacity 0.3s var(--ease);
+  @include media('<=tablet') {
+    right: 16rem;
+    bottom: 16rem;
+    width: 44rem;
+    height: 44rem;
+  }
 }
 
-body{
-    counter-reset: section;
+.backToTop:hover {
+  transform: translateY(-4rem);
+  box-shadow: 0 18rem 42rem rgba(255, 46, 151, 0.45);
 }
 
-h1{
-    max-width: 800rem;
-    font-size: 40rem;
-    line-height: 100rem;
-    font-weight: 750;
-    text-align: center;
-    font-stretch: condensed;
-    margin: 0rem auto;
-    color:white;
-    margin-top: 130rem;
-    @include media('<=tablet'){
-        font-size: 28rem;
-        margin: 100rem auto 40rem;
-        line-height: 50rem;
-    }
+.backToTop svg {
+  width: 22rem;
+  height: 22rem;
 }
 
-p{
-    max-width: 500rem;
-    width: 100%;
-    font-size: 28rem;
-    text-align: center;
-    margin:0 auto;
-    color:white;
-    @include media('<=tablet'){
-        font-size: 16rem;
-        line-height: 1.2;
-    }
-}
-
-h2{
-    max-width: 800rem;
-    font-size: 40rem;
-    line-height: 1.2;
-    font-weight: 750;
-    text-align: center;
-    margin: 0;
-    color:white;
-    @include media('<=tablet'){
-        font-size: 16rem;
-        line-height: 30rem;
-    }
-}
-
-h3{
-    max-width: 800rem;
-    font-size: 40rem;
-    line-height: 1.2;
-    font-weight: 750;
-    text-align: center;
-    margin: 0;
-    color:white;
-    @include media('<=tablet'){
-        font-size: 15rem;
-        line-height: 30rem;
-    }
-}
-
-h4{
-    max-width: 800rem;
-    font-size: 40rem;
-    line-height: 100rem;
-    font-weight: 750;
-    text-align: center;
-    margin: 0;
-    color:white;
-    @include media('<=tablet'){
-        font-size: 13rem;
-        line-height: 10rem;
-    }
-}
-
-.backToTop{
-    position: fixed;
-    left: 50%;
-    right: 0;
-    bottom: 2%;
-    transform: translateX(-50%);
-    width: 30rem;
-    height: 30rem;
-    z-index: 100;
-    @include media('<=tablet'){
-        width: 25rem;
-        height: 25rem;
-    }
+.backToTop--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20rem);
 }

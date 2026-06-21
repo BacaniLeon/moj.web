@@ -1,70 +1,110 @@
 <template>
   <Navigation />
-  <BackToTop/>
-  
-    <h1 class="myExperience_h1"> MY EXPERIENCE</h1>
-      <div class="myExperience">
-      <Swiper
-      :modules="[Pagination, Autoplay, EffectCube]"
-          effect="cube"
-          :grab-cursor="true"
-          :pagination="{
-            clickable: true,
-            type: 'fraction'
-          }"
-          :cube-effect="{
-            shadow:false
-          }"
-          :autoplay="{
-          delay: 30000,
-          disableOnInteraction: true,
-        }"
-          >
-        <SwiperSlide v-for="exp in experience">
-        <div class="myExperience__Exp">
-          <h2>{{ exp.place }}</h2>
-          <h3>{{ exp.job }}</h3>
+  <BackToTop />
+
+  <section class="section expHead">
+    <p class="eyebrow">Career so far</p>
+    <h1 class="section-title">Experience &amp; <span class="gradient-text">milestones</span></h1>
+    <p class="section-sub">
+      From logistics operations to front-end internships to quality engineering —
+      every step taught me something I still use today.
+    </p>
+  </section>
+
+  <!-- ===================== TIMELINE ===================== -->
+  <section class="section timeline">
+    <article
+      v-for="(exp, i) in experience"
+      :key="exp.place"
+      class="timeline__item"
+      v-motion
+      :initial="{ opacity: 0, x: -40 }"
+      :visible-once="{ opacity: 1, x: 0, transition: { duration: 600, delay: i * 80 } }"
+    >
+      <div class="timeline__marker">
+        <span class="timeline__dot"></span>
+      </div>
+      <div class="timeline__card glass">
+        <div class="timeline__top">
+          <div>
+            <h2 class="timeline__role">{{ exp.job }}</h2>
+            <p class="timeline__place gradient-text">{{ exp.place }}</p>
+          </div>
+          <span class="timeline__date">{{ exp.duration }}</span>
         </div>
-        <h4>{{ exp.duration }}</h4>
-        <div class="myExperience__Description">
-            <p>{{ exp.description }}</p>
+        <p class="timeline__desc">{{ exp.description }}</p>
+        <ul class="timeline__tags">
+          <li v-for="tag in exp.tags" :key="tag">{{ tag }}</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================== CERTIFICATES (placeholder) ===================== -->
+  <section class="section">
+    <p class="eyebrow">Credentials</p>
+    <h2 class="section-title">Certificates &amp; <span class="gradient-text">courses</span></h2>
+    <p class="section-sub">
+      <!-- TODO: Replace these example certificates with the real ones from your LinkedIn
+           (name, issuer, date, and optional credential link). -->
+      A growing collection of certifications and completed courses.
+    </p>
+
+    <div class="certs">
+      <article
+        v-for="(cert, i) in certificates"
+        :key="cert.title"
+        class="certCard glass"
+        v-motion
+        :initial="{ opacity: 0, y: 30 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 70 } }"
+      >
+        <div class="certCard__badge">🏅</div>
+        <div class="certCard__body">
+          <h3 class="certCard__title">{{ cert.title }}</h3>
+          <p class="certCard__issuer">{{ cert.issuer }}</p>
+          <span class="certCard__date">{{ cert.date }}</span>
         </div>
-        
-        
-      </SwiperSlide>
-      </Swiper>
+        <a v-if="cert.url" :href="cert.url" target="_blank" rel="noopener" class="certCard__link">View →</a>
+      </article>
     </div>
+  </section>
+
   <Footer />
 </template>
 
 <script setup>
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Pagination, EffectCube } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-cube";
-import "swiper/css/pagination";
-
 const experience = [
   {
-    job: "Operations Agent",
-    place: "DHL Express Croatia:",
-    description: "During my college summers and from June 2021 to October 2022, I gained extensive professional experience at DHL. I worked as a courier, where I was responsible for the safe and timely delivery of packages, and as a warehouse operations, managing third-party package sorting for partners including Hrvatska Pošta, Overseas Express, and BoxNow. In addition, I served as an export agent, where I built ULDs and supported the preparation and dispatch of packages via air transport. Throughout my time at DHL, I also strengthened my proficiency in Microsoft Excel, Word, and Outlook, using these tools to optimize workflows, improve accuracy, and increase overall efficiency.",
-    duration: "Jun 2019 - Sep 2023",
+    job: 'QA Engineer',
+    place: 'ReversingLabs',
+    duration: 'Mar 2025 — Present',
+    description:
+      'Skilled in both manual and automated testing with expertise in Selenium (Python), Jenkins, Jira, and TestRail. I actively contribute to daily team meetings to discuss improvements, perform feature testing, and maintain test coverage by updating and rewriting outdated test cases.',
+    tags: ['Selenium', 'Python', 'Jenkins', 'Jira', 'TestRail'],
   },
-
   {
-    job: "Frontend Intern",
-    place: "SHAPE:",
-    description: "During my internship at SHAPE 404, I had the opportunity to work on real-life projects within a Vue.js environment. Through hands-on experience, I mastered Vue3 and Nuxt frameworks, enabling me to efficiently complete assignments within specified deadlines. This experience not only enhanced my technical skills but also provided valuable insight into working on professional projects in a dynamic environment.",
-    duration: "Mar 2024 - Mar 2024",
+    job: 'Frontend Intern',
+    place: 'SHAPE 404',
+    duration: 'Mar 2024',
+    description:
+      'During my internship at SHAPE 404 I worked on real-life projects in a Vue.js environment. Through hands-on experience I sharpened my Vue 3 and Nuxt skills, completing assignments within deadlines and gaining valuable insight into professional projects in a dynamic environment.',
+    tags: ['Vue 3', 'Nuxt', 'JavaScript', 'SCSS'],
   },
-
   {
-    job: "QA Engineer",
-    place: "ReversingLabs:",
-    description: "Skilled in both manual and automated testing with expertise in Selenium (Python), Jenkins, Jira, and TestRail. Actively contribute to daily team meetings to discuss improvements, perform feature testing, and maintain test coverage by updating and rewriting outdated test cases.",
-    duration: "Mar 2025 - Current",
+    job: 'Operations Agent',
+    place: 'DHL Express Croatia',
+    duration: 'Jun 2019 — Sep 2023',
+    description:
+      'Across college summers and full-time stretches I gained broad operational experience at DHL — as a courier ensuring safe, timely deliveries; in warehouse operations sorting third-party packages for partners like Hrvatska Pošta, Overseas Express and BoxNow; and as an export agent building ULDs and preparing air shipments. I also strengthened my Excel, Word and Outlook skills to optimize workflows and accuracy.',
+    tags: ['Operations', 'Logistics', 'Excel', 'Teamwork'],
   },
+]
 
-];
+// TODO: Replace these placeholder entries with your real LinkedIn certificates.
+const certificates = [
+  { title: 'Certificate name', issuer: 'Issuing organization', date: '2024', url: '' },
+  { title: 'Certificate name', issuer: 'Issuing organization', date: '2024', url: '' },
+  { title: 'Certificate name', issuer: 'Issuing organization', date: '2023', url: '' },
+]
 </script>

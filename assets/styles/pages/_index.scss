@@ -1,89 +1,253 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
-html{
-    overflow-x: hidden;
+
+/* ===================== HERO ===================== */
+.hero {
+  width: min(1180rem, 90%);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70rem;
+  padding: 140rem 0 60rem;
+  @include media('<=tablet') {
+    flex-direction: column;
+    text-align: center;
+    gap: 48rem;
+    padding: 120rem 0 40rem;
+  }
 }
 
-.welcome{
-    display: grid;
-    max-width: 800rem;
-    margin: 200rem auto 14rem;
+.hero__text {
+  flex: 1 1 540rem;
+  max-width: 600rem;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10rem;
+  font-size: 13rem;
+  color: var(--text-soft);
+  padding: 8rem 16rem;
+  border-radius: 100rem;
+  background: var(--glass-bg);
+  border: 1rem solid var(--glass-border);
+  margin-bottom: 24rem;
+}
+
+.hero__dot {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  background: #22e58a;
+  box-shadow: 0 0 0 0 rgba(34, 229, 138, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 229, 138, 0.5); }
+  70% { box-shadow: 0 0 0 10rem rgba(34, 229, 138, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 229, 138, 0); }
+}
+
+.hero .eyebrow {
+  @include media('<=tablet') {
     justify-content: center;
-    @include media('<=tablet'){
-        margin: 100rem auto 14rem;
-    }
-    h2{
-        @include media('<=tablet'){
-            font-size:30rem;
-            padding: 10rem;
-        }
-    }
-    p{
-        font-size: 25rem;
-        @include media('<=tablet'){
-            font-size: 15rem;
-        }
-    }
-    img{
-        margin: auto;
-        width: 150rem;
-    };
+  }
 }
 
-.prviDio{
-    width: 90%;
-    margin: 0 auto;
-    display: block;
-    @include media('<=tablet'){
-        width: 100%;
-        padding: 0;
-        margin: 100rem auto;
-    }
+.hero__name {
+  font-size: 72rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 24rem;
+  @include media('<=tablet') {
+    font-size: 44rem;
+  }
 }
 
-.prviDio__Description{
-    width: 100%;
-    display: flex;
-    margin-bottom: 100rem;
-    padding: 50rem 0;
-    @include media('<=tablet'){
-        padding: 0rem;
-        width: 90%;
-        display: block;
-        margin: 0 auto;   
-        p{
-            width: 80%;
-            font-size: 16rem;
-            line-height: 1.2;
-        }
-    }
+.hero__lead {
+  font-size: 18rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+  margin-bottom: 36rem;
+  @include media('<=tablet') {
+    font-size: 16rem;
+  }
 }
 
-.swiperDiv{
-    max-width: 300rem;
-    margin:auto 120rem;
-    @include media('<=tablet'){
-        width: 80%;
-        margin: 50rem auto;
-    }
+.hero__lead strong {
+  color: var(--text-strong);
+  font-weight: 600;
 }
 
-.swiper-slide img{
-    width: 100%;
+.hero__actions {
+  display: flex;
+  gap: 16rem;
+  margin-bottom: 40rem;
+  @include media('<=tablet') {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
-a{
-    text-decoration: underline;
-    color: bisque;
+.hero__social {
+  list-style: none;
+  display: flex;
+  gap: 14rem;
+  margin: 0;
+  padding: 0;
+  @include media('<=tablet') {
+    justify-content: center;
+  }
 }
 
-.footerHidden{
-    display: none;
+.hero__social a {
+  display: grid;
+  place-items: center;
+  width: 48rem;
+  height: 48rem;
+  border-radius: 14rem;
+  background: var(--glass-bg);
+  border: 1rem solid var(--glass-border);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
 }
 
-.navHidden{
-    display: none;
+.hero__social a:hover {
+  transform: translateY(-4rem);
+  border-color: var(--accent-cyan);
 }
 
-.img__ForHomePage{
-    max-width: 500rem;
+.hero__social img {
+  width: 22rem;
+  height: 22rem;
+  object-fit: contain;
+}
+
+/* hero media */
+.hero__media {
+  position: relative;
+  flex: 0 0 auto;
+  width: 380rem;
+  @include media('<=tablet') {
+    width: 280rem;
+  }
+}
+
+.hero__glow {
+  position: absolute;
+  inset: -30rem;
+  background: var(--grad-brand);
+  filter: blur(60rem);
+  opacity: 0.45;
+  border-radius: 50%;
+  z-index: -1;
+  animation: glowFloat 6s ease-in-out infinite alternate;
+}
+
+@keyframes glowFloat {
+  from { transform: translateY(-10rem) scale(0.96); }
+  to { transform: translateY(10rem) scale(1.04); }
+}
+
+.hero__card {
+  padding: 18rem;
+  border-radius: var(--radius-lg);
+}
+
+.hero__photo {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* ===================== STATS ===================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20rem;
+  @include media('<=tablet') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stats__item {
+  padding: 30rem 24rem;
+  text-align: center;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.stats__item:hover {
+  transform: translateY(-6rem);
+  border-color: rgba(8, 249, 255, 0.4);
+}
+
+.stats__num {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 40rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10rem;
+  @include media('<=tablet') {
+    font-size: 30rem;
+  }
+}
+
+.stats__label {
+  font-size: 14rem;
+  color: var(--text-faint);
+}
+
+/* ===================== STACK ===================== */
+.stack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22rem;
+  @include media('<=tablet') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stack__group {
+  padding: 32rem;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.stack__group:hover {
+  transform: translateY(-5rem);
+  border-color: rgba(139, 92, 246, 0.45);
+}
+
+.stack__title {
+  font-size: 22rem;
+  font-weight: 600;
+  margin-bottom: 20rem;
+}
+
+.stack__tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem;
+  margin: 0;
+  padding: 0;
+}
+
+.stack__tags li {
+  font-size: 14rem;
+  color: var(--text-soft);
+  padding: 9rem 16rem;
+  border-radius: 100rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1rem solid var(--glass-border);
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.stack__tags li:hover {
+  color: var(--text-strong);
+  border-color: var(--accent-cyan);
+  background: rgba(8, 249, 255, 0.1);
 }
